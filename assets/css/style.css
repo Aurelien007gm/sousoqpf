@@ -1,8 +1,207 @@
+/* =========================
+   Variables (charte graphique)
+   ========================= */
+
+:root {
+    --bg-main: #f5f7fa;
+    --bg-card: #ffffff;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --accent: #991b1b;
+    --border-light: #e5e7eb;
+}
+
+/* =========================
+   Base
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+/* =========================
+   Layout
+   ========================= */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* =========================
+   Header
+   ========================= */
+
+.site-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-light);
+    padding: 1.5rem 0;
+}
+
+    .site-header h1 {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+.subtitle {
+    margin: 0.25rem 0 1rem;
+    color: var(--text-muted);
+}
+
+.main-nav a {
+    margin-right: 1rem;
+    font-weight: 500;
+}
+
+    .main-nav a.active {
+        text-decoration: underline;
+    }
+
+/* =========================
+   Sections
+   ========================= */
+
+main {
+    padding: 2rem 0;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+    section h2 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+/* =========================
+   Galerie / cartes
+   ========================= */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .card img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+    }
+
+.card-body {
+    padding: 1rem;
     text-align: center;
 }
 
-#carousel img {
-    max-width: 300px;
+    .card-body h3 {
+        margin: 0;
+        font-size: 1.1rem;
+        color: var(--text-main);
+    }
+
+/* =========================
+   Footer
+   ========================= */
+
+.site-footer {
+    background-color: #ffffff;
+    border-top: 1px solid var(--border-light);
+    padding: 1.5rem 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* =========================
+   Pages politiciens
+   ========================= */
+
+.profile-header {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    align-items: start;
+    margin-bottom: 2.5rem;
+}
+
+.profile-photo {
+    width: 200px;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 6px;
+    border: 1px solid var(--border-light);
+    background-color: #fff;
+}
+
+    .profile-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.profile-header h2 {
+    margin-top: 0;
+}
+
+.facts-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+    .facts-list li {
+        background-color: #ffffff;
+        border: 1px solid var(--border-light);
+        border-left: 5px solid var(--accent);
+        padding: 1rem 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+.text-muted {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .profile-header {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-photo {
+        margin: 0 auto;
+    }
 }

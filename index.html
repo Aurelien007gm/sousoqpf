@@ -2,27 +2,70 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>SOUSOQPF</title>
+    <title>OQPF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <h1>Sous OQPF</h1>
+    <header class="site-header">
+        <div class="container">
+            <h1>OQPF</h1>
+            <p class="subtitle">Obligation de Quitter la Politique Française</p>
 
-    <div id="carousel">
-        <button id="prev">←</button>
+            <nav class="main-nav">
+                <a href="index.html" class="active">Accueil</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+                <a href="mentions-legales.html">Mentions légales</a>
+            </nav>
+        </div>
+    </header>
 
-        <a id="politician-link" href="politiciens/exemple.html">
-            <img id="politician-image" src="assets/images/exemple.jpg" alt="Politicien">
-        </a>
+    <main class="container">
 
-        <button id="next">→</button>
-    </div>
+        <section class="intro">
+            <h2>Qu’est-ce qu’une OQPF&nbsp;?</h2>
+            <p>
+                Une « obligation de quitter la politique française » (OQPF) est un concept
+                parodique désignant des responsables politiques ayant fait l’objet de
+                condamnations judiciaires définitives, telles que rapportées par des sources
+                publiques et accessibles à tous.
+            </p>
+        </section>
 
-    <footer>
-        <a href="mentions-legales.html">Mentions légales</a>
+        <section class="gallery">
+            <h2>Responsables politiques concernés</h2>
+
+            <div class="card-grid">
+
+                <a class="card" href="politiciens/nicolas-sarkozy.html">
+                    <img src="assets/images/sarkozy.jpg" alt="Nicolas Sarkozy">
+                    <div class="card-body">
+                        <h3>Nicolas Sarkozy</h3>
+                    </div>
+                </a>
+
+                <a class="card" href="politiciens/marine-le-pen.html">
+                    <img src="assets/images/lepen.jpg" alt="Marine Le Pen">
+                    <div class="card-body">
+                        <h3>Marine Le Pen</h3>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                Site parodique —
+                <a href="mentions-legales.html">Mentions légales</a>
+            </p>
+        </div>
     </footer>
 
-    <script src="assets/js/carousel.js"></script>
 </body>
 </html>
